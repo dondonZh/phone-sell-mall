@@ -1,7 +1,31 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+
+    </div>
 </template>
-<script>console.log('ENVIMENT:', process.env.NODE_ENV)
+<script>console.log(`ENVIMENT: ${process.env.NODE_ENV}`)
+
 </script>
+<style>
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 50px);
+  }
+  .container  div:nth-child(even){
+    background-color: yellow;
+  }
+  .container  div:nth-child(odd){
+    background-color: green;
+  }
+</style>

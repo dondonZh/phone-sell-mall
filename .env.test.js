@@ -1,2 +1,5 @@
-NODE_ENV='test';                    # 测试环境
-VUE_APP_TT='TT'
+module.exports = {
+  NODE_ENV:'test',
+
+}
+

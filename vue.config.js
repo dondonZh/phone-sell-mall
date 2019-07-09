@@ -24,7 +24,6 @@ module.exports = {
   },
   // 可以在正式环境下关闭错误报告 console.log...
   configureWebpack: config => {
-
     if (process.env.NODE_ENV === 'production') {
       // 为生产环境修改配置...
     } else {
@@ -51,13 +50,13 @@ module.exports = {
     open: true, // 自动打开浏览器
     proxy: {
       '/api': { //  本地
-        target: 'http://192.168.102.13:8080/',
+        target: 'http://192.168.0.2:8085/',
         // 如果要代理 websockets
-        ws: true,
+        ws: false,
         changeOrigin: true
       },
       '/test': { // 测试
-        target: 'http://172.22.0.58:8082/'
+        target: '120.72.63.222'
       },
       '/pre-release': { // 预发布
         target: 'http://XXX.com/'
