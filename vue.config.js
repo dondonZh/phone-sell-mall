@@ -24,6 +24,7 @@ module.exports = {
   },
   // 可以在正式环境下关闭错误报告 console.log...
   configureWebpack: config => {
+
     if (process.env.NODE_ENV === 'production') {
       // 为生产环境修改配置...
     } else {
