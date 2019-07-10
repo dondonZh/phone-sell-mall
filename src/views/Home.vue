@@ -76,6 +76,7 @@
       <div   class="swiper-pagination"  slot="pagination"></div>
     </swiper>
     </section>
+    <iconSvg icon-class="geta" />
   </div>
 </template>
 <script>
@@ -83,7 +84,7 @@
 import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import topbar from '@/components/topbar.vue'
-import iconSvg from '@/components/icon-svg.vue'
+import '../icons/geta.svg'
 
 export default {
   name: 'home',
@@ -119,7 +120,6 @@ export default {
     // current swiper instance
     // 然后你就可以使用当前上下文内的swiper对象去做你想做的事了
     console.log('this is current swiper instance object', this.swiper)
-   /* this.swiper.slideTo(3, 1000, false)*/
   },
   methods: {
     callback () {
@@ -127,7 +127,6 @@ export default {
     }
   },
   components: {
-    iconSvg,
     topbar,
     swiper,
     swiperSlide
@@ -182,4 +181,5 @@ section{
     opacity: 1;
     background: #333333;
   }
+
 </style>

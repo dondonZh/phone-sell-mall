@@ -1,3 +1,8 @@
+var path = require('path')
+
+function resolve (dir) {
+  return path.join(__dirname, './', dir)
+}
 
 module.exports = {
   // 部署应用包时的基本 URL
@@ -15,12 +20,24 @@ module.exports = {
 
   // 允许我们更细粒度的控制 webpack 的内部配置,例如：以下操作我们可以成功修改 webpack 中 module 项里配置 rules 规则为图片下的 url-loader 值，将其 limit 限制改为 5M
   chainWebpack: config => {
-    config.module.rule('images')
-      .use('url-loader')
-      .tap(options =>
-        Object.assign(options, {
-          limit: 5120
-        }))
+    // svg rule loader
+    const svgRule = config.module.rule('svg') // 找到svg-loader
+    svgRule.uses.clear() // 清除已有的loader, 如果不这样做会添加在此loader之后
+    svgRule.exclude.add(/node_modules/) // 正则匹配排除node_modules目录
+    svgRule // 添加svg新的loader处理
+      .test(/\.svg$/)
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]'
+      })
+
+    // 修改images loader 添加svg处理
+    const imagesRule = config.module.rule('images')
+    imagesRule.exclude.add(resolve('src/icons'))
+    config.module
+      .rule('images')
+      .test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
   },
   // 可以在正式环境下关闭错误报告 console.log...
   configureWebpack: config => {
