@@ -1,6 +1,13 @@
 <template>
   <div class="home">
-    <topbar></topbar>
+    <topbar>
+      <template v-slot:title>
+         大力哥商店
+      </template>
+      <template v-slot:number>
+        17855827666
+      </template>
+    </topbar>
     <section>
     <swiper :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
       <!-- slides -->
@@ -18,7 +25,7 @@
       <swiper-slide>
         <ul>
           <li>
-            <iconSvg icon-class="shouji" />
+            <iconSvg icon-class="shouji"  />
             <div>手机靓号</div>
           </li>
           <li>
@@ -72,11 +79,14 @@
           <li style="flex:8;flex-basis: 120px;"></li>
       </ul>
       </swiper-slide>
+
       <!-- Optional controls -->
       <div   class="swiper-pagination"  slot="pagination"></div>
     </swiper>
     </section>
+    <a href="www.baidu.com">link_style</a>
     <iconSvg icon-class="geta" />
+    <bottombar></bottombar>
   </div>
 </template>
 <script>
@@ -84,6 +94,7 @@
 import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import topbar from '@/components/topbar.vue'
+import bottombar from '@/components/bottomBar.vue'
 import '../icons/geta.svg'
 
 export default {
@@ -129,7 +140,8 @@ export default {
   components: {
     topbar,
     swiper,
-    swiperSlide
+    swiperSlide,
+    bottombar
   }
 }
 </script>
@@ -181,5 +193,4 @@ section{
     opacity: 1;
     background: #333333;
   }
-
 </style>

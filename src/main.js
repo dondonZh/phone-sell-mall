@@ -9,7 +9,7 @@ Vue.config.productionTip = false
 Vue.component('iconSvg', iconSvg)
 
 const requireAll = requireContext => requireContext.keys().map(requireContext)
-const req = require.context('./assets/icons/svg', false, /\.svg$/)
+const req = require.context('./icons', false, /\.svg$/)
 requireAll(req)
 
 new Vue({

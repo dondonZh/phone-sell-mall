@@ -1,6 +1,7 @@
 <template>
 <div class="topbar">
-  <span>小东靓号商城</span>&nbsp;<div class="inner">17855827439</div>
+
+  <span> <slot name="title">小东靓号商城</slot></span>&nbsp;<div class="inner"><slot name="number">17855827439</slot></div>
 </div>
 </template>
 
