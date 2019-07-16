@@ -8,8 +8,26 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      redirect: '/home'
+    },
+    {
+      path: '/home',
+      component: resolve => require(['./views/Home.vue'], resolve),
+      redirect: '/home/discovery',
+      children: [
+        {
+          path: 'discovery',
+          component: resolve =>
+            require(['./views/page/discovery.vue'], resolve),
+          meta: { title: '发现' }
+        },
+        {
+          path: 'about',
+          component: resolve =>
+            require(['./views/About.vue'], resolve),
+          meta: { title: '关于' }
+        }
+      ]
     },
     {
       path: '/about',
