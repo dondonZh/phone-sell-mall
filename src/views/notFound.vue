@@ -1,6 +1,7 @@
 <template>
 <div>
   <div id="app">
+    <button @click="back">back</button>
     <lottie :options="defaultOptions" :height="300" :width="300" v-on:animCreated="handleAnimation"/>
     <!--<div>
       <p>Speed: x{{animationSpeed}}</p>
@@ -33,7 +34,9 @@ export default {
     handleAnimation: function (anim) {
       this.anim = anim
     },
-
+    back () {
+      this.$router.back()
+    },
     stop: function () {
       this.anim.stop()
     },

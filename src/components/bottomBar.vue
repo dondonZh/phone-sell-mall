@@ -39,8 +39,7 @@
 </template>
 
 <script>
-// TODO 404   嵌套路由
-// TODO 引入常量
+
 export default {
   name: 'bottomBar',
   data () {

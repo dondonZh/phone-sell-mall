@@ -88,6 +88,8 @@
 </template>
 
 <script>
+// TODO 动画做判断 和动画结束后跳转
+// TODO 引入常量
 // require styles
 import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
