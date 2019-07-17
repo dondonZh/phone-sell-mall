@@ -9,7 +9,6 @@
 <script>
 // require styles
 import bottombar from '@/components/bottomBar.vue'
-import '../icons/geta.svg'
 
 export default {
   name: 'home',
@@ -20,6 +19,13 @@ export default {
 }
 </script>
 <style scoped>
+.move-active, .move-leave-active {
+  transition: opacity .3s ease;
+}
+.move, .move-leave-to
+/* .component-fade-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+}
 section{
   position: relative;
   top:-280px;

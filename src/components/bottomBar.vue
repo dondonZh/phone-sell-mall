@@ -13,10 +13,10 @@
         <div>号码</div>
         </div>
       </li>
-      <li>
-        <div   class="circle inMiddle" @click="addActive(menus[2])" >
+      <li @click="addActive(menus[2])">
+        <div   class="circle inMiddle" >
         </div>
-        <iconSvg   class="inMiddle add"  :icon-class="menus[2]" iconSize="middle"  />
+        <iconSvg     class="inMiddle add"  :icon-class="menus[2]" iconSize="middle"  />
         <div class="bottom">
         <div class="middleFind">发现</div>
         </div>

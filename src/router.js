@@ -12,10 +12,10 @@ export default new Router({
     {
       path: '/home',
       component: resolve => require(['./views/Home.vue'], resolve),
-      redirect: '/home/discovery',
+      redirect: '/home/sousuo',
       children: [
         {
-          path: 'discovery',
+          path: 'sousuo',
           component: resolve =>
             require(['./views/page/discovery.vue'], resolve),
           meta: { title: '发现' }
@@ -25,6 +25,12 @@ export default new Router({
           component: resolve =>
             require(['./views/About.vue'], resolve),
           meta: { title: '关于' }
+        },
+        {
+          path: 'add',
+          component: resolve =>
+            require(['./views/page/add.vue'], resolve),
+          meta: { title: '添加' }
         }
       ]
     },
