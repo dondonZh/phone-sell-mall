@@ -1,5 +1,3 @@
-module.exports = {
-  NODE_ENV:'test',
 
-}
-
+  NODE_ENV:'test'
+  VUE_APP_TITLE = 'test'
