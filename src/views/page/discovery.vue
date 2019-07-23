@@ -88,6 +88,7 @@
 </template>
 
 <script>
+// TODO axios封装 mock的使用
 // TODO 动画做判断 和动画结束后跳转
 // TODO 引入常量
 // require styles

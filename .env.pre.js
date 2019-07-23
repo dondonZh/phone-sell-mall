@@ -1,3 +1,3 @@
 
-  NODE_ENV :'pre-release'
-  VUE_APP_TITLE = 'pre-release'
+NODE_ENV:'pre'
+VUE_APP_TITLE = 'pre-release'

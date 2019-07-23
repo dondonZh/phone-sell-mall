@@ -9,7 +9,7 @@ import iconSvg from '@/components/icon-svg.vue'
 
 Vue.config.productionTip = false
 Vue.component('iconSvg', iconSvg)
-
+Vue.prototype.$baseUrl = process.env.NODE_ENV
 
 const requireAll = requireContext => requireContext.keys().map(requireContext)
 const req = require.context('./icons', false, /\.svg$/)

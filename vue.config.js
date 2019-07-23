@@ -6,7 +6,7 @@ function resolve (dir) {
 
 module.exports = {
   // 部署应用包时的基本 URL
-  publicPath: process.env.NODE_ENV === 'production' ? '/online/' : './',
+  publicPath: './',
   // 当运行 vue-cli-service build 时生成的生产环境构建文件的目录
   outputDir: 'dist',
   // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录
@@ -20,6 +20,8 @@ module.exports = {
 
   // 允许我们更细粒度的控制 webpack 的内部配置,例如：以下操作我们可以成功修改 webpack 中 module 项里配置 rules 规则为图片下的 url-loader 值，将其 limit 限制改为 5M
   chainWebpack: config => {
+    // webpack别名设置
+    // config.resolve.alias.set('@$', resolve('src'))
     // svg rule loader
     const svgRule = config.module.rule('svg') // 找到svg-loader
     svgRule.uses.clear() // 清除已有的loader, 如果不这样做会添加在此loader之后
@@ -76,10 +78,10 @@ module.exports = {
         target: '120.72.63.222'
       },
       '/pre-release': { // 预发布
-        target: 'http://XXX.com/'
+        target: 'http://XX2X.com/'
       },
       '/production': { // 正式
-        target: 'http://XXX.com/'
+        target: 'http://X11XX.com/'
       }
     }
   },

@@ -1,5 +1,5 @@
 const plugins = []
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'prod') {
   // 移除console.log
   plugins.push('transform-remove-console')
 }

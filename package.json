@@ -5,10 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "serve:test": "vue-cli-service serve --mode test",
-    "build": "vue-cli-service build",
-    "build:pre": "vue-cli-service build --mode pre-release",
+    "serve:pre": "vue-cli-service serve --mode pre",
+    "build": "vue-cli-service build --mode prod",
+    "build:pre": "vue-cli-service build --mode pre",
     "build:test": "vue-cli-service build --mode test",
-    "build:prod": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -39,33 +39,6 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.10"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {},
-      "postcss-import": {},
-      "postcss-url": {},
-      "postcss-initial": {
-        "reset": "initial"
-      },
-      "postcss-aspect-ratio-mini": {},
-      "postcss-cssnext": {},
-      "postcss-px-to-viewport": {
-        "viewportWidth": "750",
-        "unitPrecision": "3",
-        "viewportUnit": "vw",
-        "selectorBlackList": [
-          ".ignore",
-          ".hairlines"
-        ],
-        "minPixelValue": 1,
-        "mediaQuery": false
-      },
-      "cssnano": {
-        "preset": "advanced",
-        "autoprefixer": false,
-        "postcss-zindex": false
-      }
-    }
   }
+
 }
