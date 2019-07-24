@@ -12,19 +12,20 @@
     <br>
     <div class="icon1"></div>
     <div class="icon2"></div>
+    <div>我是来测试冲突解决的 试试看</div>
     </div>
 </div>
 </template>
 <script>
-console.log("process", process);
+console.log('process', process)
 export default {
-  name: "add",
-  data() {
+  name: 'add',
+  data () {
     return {
       env: this.$baseUrl
-    };
+    }
   }
-};
+}
 </script>
 <style>
 .container {
