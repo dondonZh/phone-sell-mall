@@ -10,6 +10,7 @@
     <div>{{env}}</div>
     <div>{{env}}</div>
     <br>
+    <div>我是来测试冲突解决的第二个地方哈哈</div>
     <div class="icon1"></div>
     <div class="icon2"></div>
     <div>我是来测试冲突解决的 试试看</div>
