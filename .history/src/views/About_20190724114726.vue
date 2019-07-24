@@ -9,7 +9,7 @@
       <div>{{env}}</div>
       <div>{{env}}</div>
       <div>{{env}}</div>
-      <div>haha</div>
+      
 <div>所以说这是我的冲突点</div>
     </div>
 </template>
